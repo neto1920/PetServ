@@ -1,145 +1,42 @@
-# Welcome to your new ignited app!
+ PetServ 
+Aplicativo criado por 
+Mateus de Souza Canabrava,
+Patrícia Queiroz da Silva de Sena,
+Kassiane Bertholdo dos santos , 
+Adriana Delgado, 
+Rafael neto.
+____________________________________________________________________
+Tela Cliente + Crud - Patrícia Queiroz da Silva de Sena.
+Tela Veterinario + Crud - Mateus de Souza Canabrava
+Tela Tosador + Crud - Kassiane Bertholdo dos santos
+Tela Passeador + Crud -Adriana Delgada
+Tela Pet + Crud - Rafael Neto
+Tela de Serviços está tela tem somente um campo ao qual tem a opção de criar mais serviços além - envolvimento de toda a Equipe
+______________________________________________________________________
+Link video do app:
+https://drive.google.com/file/d/1lXBjzzN8LnIfIg4Z24PwWiYLku5mBvSU/view?usp=sharing
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
+Mateus de Souza Canabrava- Tela de Veterinario
+Foi criado a tela de veterinario com as Crud 'adicionar veterinario', 'Editar', 'remover' e 'listar veterinarios', dentro de adicionar tem as opções Nome, Especialidade,Status que pode Ocupado,Livre, Ausente etc, tem o campo avatar onde Informa-se URL da imagem que pode ser pesquisada pelo google, tem o campo de informar a data do atendimento e interage com o pet que foi criado na telas pets 'Lista de Pet'.
+Existe a regra que se não existe pelo um PET o sistema envia mensagem de alerta solicitando adiciona um Pet
+e retorna para o Home inicial do aplicativo
 
-## The latest and greatest boilerplate for Infinite Red opinions
+Patrícia Queiroz da Silva de Sena - Tela Cliente
+Foi criado a tela de clientes com o Crud 'adicionar cliente', 'Editar', 'remover' e 'listar clientes', dentro de adicionar cliente tem as opções Nome,data de nascimento,Status que pode ser aguardando atendimento,atendido, tem o campo avatar onde Informa-se URL da imagem que pode ser pesquisada pelo google e faz interação com o serviço existente, caso não tenha serviço cadastrado retorna mensagem de alerta e retorna pagina home para realizar cadastro serviço.
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+ Kassiane Bertholdo dos santos - Tela Tosador 
 
-Currently includes:
+ Foi criado a tela de tosador com o Crud 'adicionar', 'Editar', 'remover' e 'listar tosador', dentro de adicionar tosador tem as opções Nome,data do atendimento,Status que pode ser Livre, Ocupado etc, tem o campo avatar onde Informa-se URL da imagem que pode ser pesquisada pelo google e o campo Especialidade onde é informado como exemplo tosador especilidade tosar gatos ou cachorros. faz interação com o pet existente, caso não tenha 'pet' cadastrado retorna mensagem de alerta e retorna pagina home para realizar o cadastro do pet.
 
-- React Native
-- React Navigation
-- MobX State Tree
-- TypeScript
-- And more!
+ Adriana Delgada - Tela Passeador
 
-## Quick Start
+ Foi criado a tela de Passeador com o Crud 'adicionar', 'Editar', 'remover' e 'listar Passeador', dentro de adicionar Passeador tem as opções Nome,data do atendimento,Status que pode ser Livre, Ocupado etc, tem o campo avatar onde Informa-se URL da imagem que pode ser pesquisada pelo google e o campo Especialidade onde é informado como exemplo Passeador especilidade tosar gatos ou cachorros. faz interação com o pet existente, caso não tenha 'pet' cadastrado retorna mensagem de alerta e retorna pagina home para realizar o cadastro do pet.
 
-The Ignite boilerplate project's structure will look similar to this:
+ Rafael Neto - Tela Pet
 
-```
-ignite-project
-├── app
-│   ├── components
-│   ├── i18n
-│   ├── utils
-│   ├── models
-│   ├── navigators
-│   ├── screens
-│   ├── services
-│   ├── theme
-│   ├── app.tsx
-├── storybook
-│   ├── views
-│   ├── index.ts
-│   ├── storybook-registry.ts
-│   ├── storybook.ts
-│   ├── toggle-storybook.tsx
-├── test
-│   ├── __snapshots__
-│   ├── storyshots.test.ts.snap
-│   ├── mock-i18n.ts
-│   ├── mock-reactotron.ts
-│   ├── setup.ts
-│   ├── storyshots.test.ts
-├── README.md
-├── android
-│   ├── app
-│   ├── build.gradle
-│   ├── gradle
-│   ├── gradle.properties
-│   ├── gradlew
-│   ├── gradlew.bat
-│   ├── keystores
-│   └── settings.gradle
-├── ignite
-│   ├── ignite.json
-│   └── plugins
-├── index.js
-├── ios
-│   ├── IgniteProject
-│   ├── IgniteProject-tvOS
-│   ├── IgniteProject-tvOSTests
-│   ├── IgniteProject.xcodeproj
-│   └── IgniteProjectTests
-├── .env
-└── package.json
+  Foi criado a tela de Pet com o Crud 'adicionar', 'Editar', 'remover' e 'listar Passeador', dentro de adicionar Passeador tem as opções Nome,Idade do Pet em Meses, Especie, campo avatar onde Informa-se URL da imagem que pode ser pesquisada pelo google. faz interação com o cliente existente, caso não tenha 'cliente' cadastrado retorna mensagem de alerta e retorna pagina home para realizar o cadastro do cliente.
 
-```
+  Equipe - Tela de Serviços
+  A tela de Serviços foi pensanda na situação de que existe as opções de veterinario,tosador,passeador, mais o cliente pode querer um serviço do tipo atendimento,recepção,consulta,compra de ração entre outros pois uma loja de pet tem outros serviços alem dos criados pela equipe como por exemplo uma compra de pet, pensando nisso criamos essa opção, mais para o aplicativo não ficar muito complexo apenas deixamos uma tela simples aonde solicita apenas 'Nome' mais existe o crud onde 'adiciona''editar' e 'remove' 'lista seviços'
 
-### ./app directory
 
-Included in an Ignite boilerplate project is the `app` directory. This is a directory you would normally have to create when using vanilla React Native.
-
-The inside of the src directory looks similar to the following:
-
-```
-app
-│── components
-│── i18n
-├── models
-├── navigators
-├── screens
-├── services
-├── theme
-├── utils
-└── app.tsx
-```
-
-**components**
-This is where your React components will live. Each component will have a directory containing the `.tsx` file, along with a story file, and optionally `.presets`, and `.props` files for larger components. The app will come with some commonly used components like Button.
-
-**i18n**
-This is where your translations will live if you are using `react-native-i18n`.
-
-**models**
-This is where your app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
-
-**navigators**
-This is where your `react-navigation` navigators will live.
-
-**screens**
-This is where your screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.tsx` file, along with any assets or other helper files.
-
-**services**
-Any services that interface with the outside world will live here (think REST APIs, Push Notifications, etc.).
-
-**theme**
-Here lives the theme for your application, including spacing, colors, and typography.
-
-**utils**
-This is a great place to put miscellaneous helpers and utilities. Things like date helpers, formatters, etc. are often found here. However, it should only be used for things that are truely shared across your application. If a helper or utility is only used by a specific component or model, consider co-locating your helper with that component or model.
-
-**app.tsx** This is the entry point to your app. This is where you will find the main App component which renders the rest of the application.
-
-### ./ignite directory
-
-The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find generators, plugins and examples to help you get started with React Native.
-
-### ./storybook directory
-
-This is where your stories will be registered and where the Storybook configs will live.
-
-### ./test directory
-
-This directory will hold your Jest configs and mocks, as well as your [storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots) test file. This is a file that contains the snapshots of all your component storybooks.
-
-## Running Storybook
-
-From the command line in your generated app's root directory, enter `yarn run storybook`
-This starts up the storybook server and opens a story navigator in your browser. With your app
-running, choose Toggle Storybook from the developer menu to switch to Storybook; you can then
-use the story navigator in your browser to change stories.
-
-For Visual Studio Code users, there is a handy extension that makes it easy to load Storybook use cases into a running emulator via tapping on items in the editor sidebar. Install the `React Native Storybook` extension by `Orta`, hit `cmd + shift + P` and select "Reconnect Storybook to VSCode". Expand the STORYBOOK section in the sidebar to see all use cases for components that have `.story.tsx` files in their directories.
-
-## Running e2e tests
-
-Read [e2e setup instructions](./e2e/README.md).
-
-## Previous Boilerplates
-
-- [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
